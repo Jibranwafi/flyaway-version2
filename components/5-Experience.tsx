@@ -140,7 +140,7 @@ export default function Experience({ onPdfModalChange }: ExperienceProps) {
         <Navbar isPdfModalOpen={isPdfModalOpen} />
         <div className="flex flex-col">
             <div className="flex-col pb-10 flex">
-                <h1 className={`text-center font-bold text-4xl ${textColor}`}>My work experience</h1>
+                <h1 className={`text-center font-bold md:text-4xl text-2xl ${textColor}`}>My work experience</h1>
                 <div className="flex flex-row w-full md:w-1/2 mx-auto my-5 mb-10">
                     <img src={lineImage} alt="work-experience" />
                 </div>
@@ -172,16 +172,16 @@ export default function Experience({ onPdfModalChange }: ExperienceProps) {
                     </div>
                     <div className="flex flex-col">
                         <div className="md:mt-4 px-5 pb-8 pt-10 md:p-0 md:mb-6 mb-5 w-full " style={{ backgroundColor: isMobile ? timeBasedBg : 'transparent' }}>
-                            <div className="md:text-3xl text-2xl font-bold">PT Technova Optima Prima</div>
-                            <div className="md:text-xl text-lg">December 2019 – November 2020</div>
+                            <div className="md:text-3xl text-lg font-bold">PT Technova Optima Prima</div>
+                            <div className="md:text-xl text-sm">March 2021 – June 2021</div>
                         </div>
                         <div className="flex md:flex-row flex-col md:space-x-3 space-y-4 md:space-y-0 md:p-0 px-5 pb-5">
                             <div className="flex flex-col md:bg-gray-200 md:p-4 md:basis-1/2 space-y-2 md:space-y-4 rounded-t-xl overflow-hidden" style={{
                                 background: isMobile ? 'none' : sectionGradient,
                                 borderRadius: '0.75rem 0.75rem 0 0'
                             }}>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Booking <br></br> App UI</div>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Booking App UI</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Booking <br></br> App UI</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Booking App UI</div>
                                 <div className="md:text-base text-sm md:basis-full basis-1/2 ">Designed the UI for a boarding house booking application on mobile using Figma.</div>
                             </div>
                             <div className={`md:hidden border-y ${borderColor}`}></div>
@@ -189,8 +189,8 @@ export default function Experience({ onPdfModalChange }: ExperienceProps) {
                                 background: isMobile ? 'none' : sectionGradient,
                                 borderRadius: '0.75rem 0.75rem 0 0'
                             }}>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Admin<br></br> Login Page</div>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Admin Login Page</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Admin<br></br> Login Page</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Admin Login Page</div>
                                 <div className="md:text-base text-sm md:basis-full basis-1/2 ">Developed a custom admin's login page using the react.js frontend web framework.</div>
                             </div>                                
                         </div>
@@ -222,16 +222,16 @@ export default function Experience({ onPdfModalChange }: ExperienceProps) {
                     </div>
                     <div className="flex flex-col">
                         <div className="md:mt-4 px-5 pb-8 pt-10 md:p-0 md:mb-6 mb-5 w-full " style={{ backgroundColor: isMobile ? timeBasedBg : 'transparent' }}>
-                            <div className="md:text-3xl text-2xl font-bold">PT Telekomunikasi Seluler</div>
-                            <div className="md:text-xl text-lg">December 2019 – November 2020</div>
+                            <div className="md:text-3xl text-lg font-bold">PT Telekomunikasi Seluler</div>
+                            <div className="md:text-xl text-sm">October 2022 – December 2022</div>
                         </div>
                         <div className="flex md:flex-row flex-col md:space-x-3 space-y-4 md:space-y-0 md:p-0 px-5 pb-5">
                             <div className="flex flex-col md:bg-gray-200 md:p-4 md:basis-full space-y-2 md:space-y-4 rounded-t-xl overflow-hidden" style={{
                                 background: isMobile ? 'none' : sectionGradient,
                                 borderRadius: '0.75rem 0.75rem 0 0'
                             }}>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Raspberry Pi<br></br> Telegram Bot</div>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Raspberry Pi Telegram Bot</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Raspberry Pi<br></br> Telegram Bot</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Raspberry Pi Telegram Bot</div>
                                 <div className="md:text-base text-sm md:basis-full basis-1/2 ">Created an alternative telegram bot powered by a Raspberry Pi which can be compared and analyzed against the version currently utilized at the office in PT Telkomsel.</div>
                             </div>                               
                         </div>
@@ -263,16 +263,16 @@ export default function Experience({ onPdfModalChange }: ExperienceProps) {
                     </div>
                     <div className="flex flex-col">
                         <div className="md:mt-4 px-5 pb-8 pt-10 md:p-0 md:mb-6 mb-5 w-full " style={{ backgroundColor: isMobile ? timeBasedBg : 'transparent' }}>
-                            <div className="md:text-3xl text-2xl font-bold">PT Lumbung Artha Kita</div>
-                            <div className="md:text-xl text-lg">December 2019 – November 2020</div>
+                            <div className="md:text-3xl text-lg font-bold">PT Lumbung Artha Kita</div>
+                            <div className="md:text-xl text-sm">July 2024 – Present</div>
                         </div>
                         <div className="flex md:flex-row flex-col md:space-x-3 space-y-4 md:space-y-0 md:p-0 px-5 pb-5">
                             <div className="flex flex-col md:bg-gray-200 md:p-4 md:basis-1/3 space-y-2 md:space-y-4 rounded-t-xl overflow-hidden" style={{
                                 background: isMobile ? 'none' : sectionGradient,
                                 borderRadius: '0.75rem 0.75rem 0 0'
                             }}>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Lunogi.com<br></br> Website</div>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Lunogi.com Website</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Lunogi.com<br></br> Website</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Lunogi.com Website</div>
                                 <div className="md:text-base text-sm md:basis-full basis-1/2 ">Designed and developed the webpage for lunogi.com, an affiliate website which promotes some of the most popular products from Amazon.</div>
                             </div>
                             <div className={`md:hidden border-y ${borderColor}`}></div>
@@ -280,8 +280,8 @@ export default function Experience({ onPdfModalChange }: ExperienceProps) {
                                 background: isMobile ? 'none' : sectionGradient,
                                 borderRadius: '0.75rem 0.75rem 0 0'
                             }}>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Healthkita.com<br></br> Website</div>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Healthkita.com Website</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Healthkita.com<br></br> Website</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Healthkita.com Website</div>
                                 <div className="md:text-base text-sm md:basis-full basis-1/2 ">Designed and developed the webpage for healthkita.com, a healthcare agency service which focuses on bringing Indonesian citizens to Malaysia for medical checkup and stem cell treatment.</div>
                             </div>
                             <div className={`md:hidden border-y ${borderColor}`}></div>
@@ -289,8 +289,8 @@ export default function Experience({ onPdfModalChange }: ExperienceProps) {
                                 background: isMobile ? 'none' : sectionGradient,
                                 borderRadius: '0.75rem 0.75rem 0 0'
                             }}>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Lubkita.id<br></br>Website</div>
-                                <div className="font-bold md:text-2xl text-lg md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Lubkita.id Website</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Lubkita.id<br></br>Website</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Lubkita.id Website</div>
                                 <div className="md:text-base text-sm md:basis-full basis-1/2 ">Designed and developed the webpage for lubkita.id, a website showcasing the highlights for the company's main service.</div>
                             </div>                                  
                         </div>

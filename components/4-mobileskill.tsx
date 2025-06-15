@@ -141,7 +141,7 @@ export default function MobileSkills() {
 
     return (
         <div className="relative" style={{ background }}>
-            <div className="flex w-full text-center justify-center gap-3 pt-10 pb-5">
+            <div className="flex w-full text-center justify-center gap-3 pt-20 pb-5">
                 <div className='mt-auto text-xl font-extralight' style={{ color: textColor }}>Here are the</div>
                 <h1 className='font-bold text-5xl my-auto text-white'>Skills</h1>
                 <div className='mt-auto text-xl font-extralight' style={{ color: textColor }}>I can offer</div>
@@ -200,7 +200,18 @@ export default function MobileSkills() {
                 />
             </div>
 
-            <div ref={scrollContainerRef} className="flex overflow-x-auto px-8 pt-5 pb-10">
+            <div 
+                ref={scrollContainerRef} 
+                className="flex overflow-x-auto px-8 pt-5 pb-10"
+                style={{
+                    scrollBehavior: 'smooth',
+                    WebkitOverflowScrolling: 'touch',
+                    scrollSnapType: 'x mandatory',
+                    scrollSnapAlign: 'start',
+                    overscrollBehaviorX: 'contain',
+                    touchAction: 'pan-x'
+                }}
+            >
 
 
 
@@ -211,7 +222,7 @@ export default function MobileSkills() {
                 
 
                 {/* Skill card */}
-                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative">
+                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative scroll-snap-align-start">
                     {/* Image section */}
                     <div className="relative">
                         <img src="skills-gamedevelopment.png" alt="Embedded Systems" className="rounded-t-[20px] object-cover"/>
@@ -321,7 +332,7 @@ export default function MobileSkills() {
 
 
                 {/* Skill card */}
-                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative">
+                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative scroll-snap-align-start">
                     {/* Image section */}
                     <div className="relative">
                         <img src="skills-embeddedsystems.png" alt="Embedded Systems" className="rounded-t-[20px] object-cover"/>
@@ -419,7 +430,7 @@ export default function MobileSkills() {
                 </div>
 
                 {/* Skill card */}
-                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative">
+                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative scroll-snap-align-start">
                     {/* Image section */}
                     <div className="relative">
                         <img src="skills-datascience.png" alt="Embedded Systems" className="rounded-t-[20px] object-cover"/>
@@ -516,7 +527,7 @@ export default function MobileSkills() {
                 </div>
 
                 {/* Skill card */}
-                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative">
+                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative scroll-snap-align-start">
                     {/* Image section */}
                     <div className="relative">
                         <img src="skills-frontendweb.png" alt="Embedded Systems" className="rounded-t-[20px] object-cover"/>
@@ -615,7 +626,7 @@ export default function MobileSkills() {
                 </div>
 
                 {/* Skill card */}
-                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative">
+                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative scroll-snap-align-start">
                     {/* Image section */}
                     <div className="relative">
                         <img src="skills-backendweb.png" alt="Embedded Systems" className="rounded-t-[20px] object-cover"/>
@@ -713,7 +724,7 @@ export default function MobileSkills() {
                 </div>
 
                 {/* Skill card */}
-                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative">
+                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative scroll-snap-align-start">
                     {/* Image section */}
                     <div className="relative">
                         <img src="skills-digitalmarketing.png" alt="Embedded Systems" className="rounded-t-[20px] object-cover"/>
@@ -810,7 +821,7 @@ export default function MobileSkills() {
                 </div>
 
                 {/* Skill card */}
-                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative">
+                <div className="flex flex-col bg-white rounded-[20px] w-[290px] flex-shrink-0 shadow-xl hover:translate-y-[-10px] transition-all duration-300 ease-in-out relative scroll-snap-align-start">
                     {/* Image section */}
                     <div className="relative">
                         <img src="skills-literature.png" alt="Embedded Systems" className="rounded-t-[20px] object-cover"/>

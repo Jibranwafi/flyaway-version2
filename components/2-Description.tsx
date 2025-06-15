@@ -43,7 +43,7 @@ export default function Description() {
                         </motion.span>
                     </AnimatePresence>
                 </h2>
-                <p className="text-gray-700 text-sm md:text-base lg:text-lg m font-mono text-left">
+                <p className="text-gray-700 text-xs md:text-base lg:text-lg font-mono text-left">
                 I'm a strong-driven individual who always strives to offer my best, often by presenting unique out-of-the-box ideas which transcend beyond the traditional norms, in hopes of bringing more imaginative and innovative solutions towards any given task. With a flexible work preference, I am equally effective when working either on my own or collaboratively alongside a team. My services are mainly tailored around software development, given my background as a Computer Science graduate who holds relevant work experiences within the tech industry, while also forming a secondary skill set in English Literature and Digital Marketing throughout the span of my college and work life.
                 </p>
             </div>

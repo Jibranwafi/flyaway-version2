@@ -123,10 +123,10 @@ export default function Contact() {
                     minHeight: '50px',
                 }}
             >
-                <div className={`md:text-[30px] text-2xl font-bold mb-2 drop-shadow-sm ${textColor}`} style={{ letterSpacing: '0.5px' }}>
+                <div className={`md:text-[30px] text-xl font-bold mb-2 drop-shadow-sm ${textColor}`} style={{ letterSpacing: '0.5px' }}>
                     Would you like to
                 </div>
-                <h1 className="md:text-[70px] text-5xl font-extrabold italic text-white drop-shadow-lg" style={{ lineHeight: 1.1 }}>
+                <h1 className="md:text-[70px] text-4xl font-extrabold italic text-white drop-shadow-lg" style={{ lineHeight: 1.1 }}>
                     Contact me?
                 </h1>
             </div>
@@ -150,7 +150,7 @@ export default function Contact() {
                     </div>
                     <div className="flex flex-col text-center">
                         <motion.div 
-                            className="md:text-lg text-sm text-white"
+                            className="md:text-lg text-xs font-extralight text-white"
                             animate={{
                                 scale: hoveredSection === 'whatsapp' ? 1.1 : 1,
                                 y: hoveredSection === 'whatsapp' ? -5 : 0
@@ -159,7 +159,7 @@ export default function Contact() {
                         >
                             I'm available on
                         </motion.div>
-                        <div className="md:text-xl text-base font-bold text-white">
+                        <div className="md:text-xl text-sm font-bold text-white">
                             <AnimatedText 
                                 text="WhatsApp" 
                                 isHovered={hoveredSection === 'whatsapp'} 
@@ -201,7 +201,7 @@ export default function Contact() {
                     </div>
                     <div className="flex flex-col text-center">
                         <motion.div 
-                            className="md:text-lg text-sm text-white"
+                            className="md:text-lg text-xs font-extralight text-white"
                             animate={{
                                 scale: hoveredSection === 'linkedin' ? 1.1 : 1,
                                 y: hoveredSection === 'linkedin' ? -5 : 0
@@ -210,7 +210,7 @@ export default function Contact() {
                         >
                             You can find me on
                         </motion.div>
-                        <div className="md:text-xl text-base font-bold text-white">
+                        <div className="md:text-xl text-sm font-bold text-white">
                             <AnimatedText 
                                 text="LinkedIn" 
                                 isHovered={hoveredSection === 'linkedin'} 
@@ -252,7 +252,7 @@ export default function Contact() {
                     </div>
                     <div className="flex flex-col text-center">
                         <motion.div 
-                            className="md:text-lg text-sm text-white"
+                            className="md:text-lg text-xs font-extralight text-white"
                             animate={{
                                 scale: hoveredSection === 'email' ? 1.1 : 1,
                                 y: hoveredSection === 'email' ? -5 : 0
@@ -261,7 +261,7 @@ export default function Contact() {
                         >
                             Or contact me via
                         </motion.div>
-                        <div className="md:text-xl text-base font-bold text-white">
+                        <div className="md:text-xl text-sm font-bold text-white">
                             <AnimatedText 
                                 text="Email" 
                                 isHovered={hoveredSection === 'email'} 

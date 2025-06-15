@@ -48,7 +48,7 @@ export default function Novel() {
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center">
                 <div className="flex flex-col md:hidden">
-                    <h1 className="text-center font-bold text-4xl ">There's one more thing...</h1>
+                    <h1 className="text-center font-bold text-2xl ">There's one more thing...</h1>
                     <div className="flex flex-row w-full md:w-1/2 mx-auto my-5">
                         <img src={lineImage} alt="work-experience" />
                     </div>
@@ -65,7 +65,7 @@ export default function Novel() {
                             className=" xl:w-[350px] lg:w-[250px] absolute -top-32 md:left-[250px] lg:left-[300px] 2xl:left-[350px] object-cover hidden md:block pb-5 pl-10" 
                         />
                     </div>
-                    <div className="font-outland md:text-2xl xl:text-4xl lg:text-3xl text-xl lg:space-y-6 space-y-4 mb-10 ">
+                    <div className="font-outland md:text-2xl xl:text-4xl lg:text-3xl text-base lg:space-y-6 space-y-4 mb-10 ">
                         <p>A novel lies before your eyes</p>
                         <p>It is a precious tale which I comprise</p>
                         <p>May I take you on a wonderful journey?</p>

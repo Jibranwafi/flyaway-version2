@@ -49,7 +49,7 @@ export default function PersonalInfo() {
         <div className={`rounded-bl-[100px] md:rounded-bl-[150px] md:p-20 p-7 pt-12 pb-16 md:pb-20 md:pt-12 ${textColor}`} style={{ backgroundColor: bgColor }}> 
         <div className="flex flex-col">
             <div className="flex-col flex">
-                    <h1 className={`text-center font-bold text-4xl ${textColor}`}>More about me</h1>
+                    <h1 className={`text-center font-bold md:text-4xl text-2xl ${textColor}`}>More about me</h1>
                 <div className="flex flex-row w-full md:w-1/2 mx-auto my-5 md:mb-20 mb-10">
                         <img src={lineImage} alt="work-experience" />
                 </div>
@@ -59,31 +59,31 @@ export default function PersonalInfo() {
                     <div className={`flex flex-col rounded-lg p-5 space-y-3 ${textColor}`} style={{
                         background: gradient
                 }}>
-                    <div className="font-bold md:text-2xl text-xl">i was born in</div>
-                    <div className="font-outland md:text-2xl text-lg">3rd of August, 2001</div>
+                    <div className="font-bold md:text-2xl text-base">i was born in</div>
+                    <div className="font-outland md:text-2xl text-sm">3rd of August, 2001</div>
                 </div>
                     <div className={`flex flex-col rounded-lg p-5 space-y-3 ${textColor}`} style={{
                         background: gradient
                 }}>
-                    <div className="font-bold md:text-2xl text-xl">i'm currently living in</div>
-                    <div className="font-outland md:text-2xl text-lg">Ciputat, South Tangerang, Banten, Indonesia</div>
+                    <div className="font-bold md:text-2xl text-base">i'm currently living in</div>
+                    <div className="font-outland md:text-2xl text-sm">Ciputat, South Tangerang, Banten, Indonesia</div>
                 </div>
                     <div className={`flex flex-col justify-center row-span-2 md:col-span-2 col-span-2 rounded-lg ${textColor}`} style={{
                         background: gradient
                 }}>
                     <div className="flex flex-col p-5 space-y-3">
-                        <div className="font-bold md:text-2xl text-xl">I graduated from</div>
-                        <div className="font-outland md:text-2xl text-lg">International University Liaison Indonesia</div>
+                        <div className="font-bold md:text-2xl text-base">I graduated from</div>
+                        <div className="font-outland md:text-2xl text-sm">International University Liaison Indonesia</div>
                     </div>
                         <div className={`border-y ${textColor === 'text-white' ? 'border-white' : 'border-black'} mx-2`}></div>
                     <div className="flex flex-row">
                         <div className="flex flex-col p-5 space-y-3 basis-1/2">
-                            <div className="font-bold md:text-2xl text-xl">I possess a</div>
-                                <div className="font-outland md:text-2xl text-lg">Bachelor's degree in<br></br>computer science</div>
+                            <div className="font-bold md:text-2xl text-base">I possess a</div>
+                                <div className="font-outland md:text-2xl text-sm">Bachelor's degree in<br></br>computer science</div>
                         </div>
                             <div className={`border-x ${textColor === 'text-white' ? 'border-white' : 'border-black'} mb-2`}></div>
                         <div className="flex flex-col p-5 space-y-3 basis-1/2">
-                            <div className="font-bold md:text-2xl text-xl">And a GPA of</div>
+                            <div className="font-bold md:text-2xl text-base">And a GPA of</div>
                             <div className="font-outland text-5xl">3.22</div>
                         </div>
                     </div>
@@ -91,8 +91,8 @@ export default function PersonalInfo() {
                     <div className={`flex flex-col col-span-2 rounded-lg p-5 space-y-3 ${textColor}`} style={{
                         background: gradient
                 }}>
-                    <div className="font-bold md:text-2xl text-xl">Below are my hobbies:</div>
-                    <div className="font-outland md:text-2xl text-lg">Music, Cycling, English Literature, Video Games, Cooking, & Tabletop roleplaying games</div>
+                    <div className="font-bold md:text-2xl text-base">Below are my hobbies:</div>
+                    <div className="font-outland md:text-2xl text-sm">Music, Cycling, English Literature, Video Games, Cooking, & Tabletop roleplaying games</div>
                 </div>
             </div>
         </div>

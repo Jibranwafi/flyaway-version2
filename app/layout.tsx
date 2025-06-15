@@ -75,6 +75,7 @@ children: React.ReactNode;
 return (
     <html lang="en" className={`${dmSans.variable} ${dmSerifDisplay.variable} ${dreamingOutland.variable} ${leckerliOne.variable} ${boldoa.variable} ${pressStart2P.variable} ${handjet.variable}`}>
     <body>
+      
         {children}
     </body>
     </html>
