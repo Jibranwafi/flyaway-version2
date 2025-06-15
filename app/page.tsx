@@ -1,103 +1,162 @@
-import Image from "next/image";
+"use client";
+
+import Greeting from '@/components/1-Greeting';
+import Description from '@/components/2-Description';
+import PersonalInfo from '@/components/3-PersonalInfo';
+import Skills from '@/components/4-Skills';
+import MobileSkills from '@/components/4-mobileskill';
+import Experience from '@/components/5-Experience';
+import Contect from '@/components/6-Contact';
+import Novel from '@/components/7-Novel';
+import Dream from '@/components/8-Dream';
+import Navbar from '@/components/navbar';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [bgColor, setBgColor] = useState("#fdebbc");
+  const [textColor, setTextColor] = useState("text-black");
+  const [sectionBgColor, setSectionBgColor] = useState("#ffc54f");
+  const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    const checkTime = () => {
+      const now = new Date();
+      const hours = now.getHours();
+      
+      // Define time ranges for different periods
+      if (hours >= 12 && hours < 17) {
+        // Afternoon (12 PM - 5 PM)
+        setBgColor("#ceedec");
+        setTextColor("text-black");
+        setSectionBgColor("#847478");
+      } else if (hours >= 17 && hours < 20) {
+        // Evening (5 PM - 8 PM)
+        setBgColor("#ffcbf6");
+        setTextColor("text-black");
+        setSectionBgColor("#712e62");
+      } else if (hours >= 20 || hours < 5) {
+        // Night (8 PM - 5 AM)
+        setBgColor("#0b2247");
+        setTextColor("text-black");
+        setSectionBgColor("#265f96");
+      } else {
+        // Morning (5 AM - 12 PM)
+        setBgColor("#fdebbc");
+        setTextColor("text-black");
+        setSectionBgColor("#ffc54f");
+      }
+    };
+
+    checkTime();
+    const interval = setInterval(checkTime, 60000); // Check every minute
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar isPdfModalOpen={isPdfModalOpen} />
+      <main className="flex-grow">
+        <div id="greeting">
+          <Greeting />
         </div>
+        
+        {/*---------------------------------- Description ----------------------------------*/}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5}}
+        >
+          <div id="description" className={`relative z-40 border-y border-transparent ${textColor}`} style={{ backgroundColor: bgColor }}>
+            <Description />
+          </div>
+        </motion.div>
+
+        {/*---------------------------------- Personal Info ----------------------------------*/}
+        <div className={`pb-3 relative z-20`} style={{ backgroundColor: sectionBgColor }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5}}
+          >
+            <PersonalInfo />
+          </motion.div>
+        </div>
+
+        {/*---------------------------------- Skills ----------------------------------*/}
+        <div id="skills" className='md:block hidden'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5}}
+          >
+            <Skills />
+          </motion.div>
+        </div>
+
+        <div id="mobile-skills" className='md:hidden'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5}}
+          >
+            <MobileSkills />
+          </motion.div>
+        </div>
+
+        {/*---------------------------------- Experience ----------------------------------*/}
+        <div id="experience" className={`py-3 relative z-20`} style={{ backgroundColor: sectionBgColor }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5}}
+          >
+            <Experience onPdfModalChange={setIsPdfModalOpen} />
+          </motion.div>
+        </div>
+
+        {/*---------------------------------- Contact ----------------------------------*/}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5}}
+        >
+          <div id="contact">
+            <Contect />
+          </div>
+        </motion.div>
+
+        {/*---------------------------------- Novel ----------------------------------*/}
+        <div id="novel" className={`py-3`} style={{ backgroundColor: sectionBgColor }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <Novel />
+          </motion.div>
+        </div>
+
+        {/*---------------------------------- Dream ----------------------------------*/}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          <div id="dream">
+            <Dream />
+          </div>
+        </motion.div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }

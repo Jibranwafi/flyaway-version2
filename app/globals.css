@@ -1,26 +1,75 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+/* Font typography examples */
+h1, h2, h3 {
+  font-family: var(--font-dm-serif-display), serif;
+}
+
+.special-heading {
+  font-family: var(--font-dreaming-outland), sans-serif;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 hover:bg-gray-100;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Font utility classes */
+  .font-dm-sans {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+  }
+  
+  .font-dm-serif {
+    font-family: var(--font-dm-serif-display), serif;
+  }
+  
+  .font-outland {
+    font-family: var(--font-dreaming-outland), sans-serif;
+  }
+
+  .font-leckerli-one {
+    font-family: var(--font-leckerli-one), cursive;
+  }
+
+  .font-boldoa {
+    font-family: var(--font-boldoa), sans-serif;
+  }
+
+  .font-press-start-2p {
+    font-family: var(--font-press-start-2p), monospace;
+  }
+
+  .font-handjet {
+    font-family: var(--font-handjet);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* This accounts for the navbar height */
 }
