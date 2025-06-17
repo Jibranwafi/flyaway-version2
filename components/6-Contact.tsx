@@ -55,7 +55,7 @@ export default function Contact() {
                 window.open('https://linkedin.com/in/jibran-wafi-419765235', '_blank');
                 break;
             case 'email':
-                window.open('mailto:jibranwaf.workmail@gmail.com', '_blank');
+                window.open('mailto:jibranwafi.workmail@gmail.com', '_blank');
                 break;
         }
     };
