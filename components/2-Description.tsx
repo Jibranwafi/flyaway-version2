@@ -40,7 +40,7 @@ export default function Description() {
             }}
         >
             <div className="w-full md:px-10 px-2 pb-10 pt-5 mx-auto text-left ">
-                <h2 className="text-4xl md:text-4xl font-bold mb-4  w-full mx-auto">
+                <h2 className="text-2xl md:text-4xl font-bold mb-4  w-full mx-auto">
                     I'm a{' '}
                     <AnimatePresence mode="wait">
                         <motion.span

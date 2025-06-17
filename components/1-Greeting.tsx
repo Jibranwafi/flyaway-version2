@@ -134,21 +134,21 @@ const Greeting = () => {
                     }}
                 >
                     <div className="relative">
-                        <img src="/textbubble-intro.png" alt="intro-bubble" className="absolute top-2 -left-24 w-[340px] object-contain hidden md:block" />
-                        <div className="absolute top-4 -left-10  font-outland text-black font-medium text-[28px] -space-y-2 hidden md:flex flex-col">
+                        <img src="/textbubble-intro.png" alt="intro-bubble" className="absolute top-2 -left-28 w-[340px] object-contain hidden md:block" />
+                        <div className="absolute top-4 -left-14  font-outland text-black font-medium text-[28px] -space-y-2 hidden md:flex flex-col">
                             <div className=''>Allow me to</div>
                             <div className=''>introduce myself...</div>
                         </div>
                     </div>
                     <div className="relative">
-                        <img src="/textbubble-name.png" alt="name-bubble" className="absolute -top-3 -right-48 w-[465px] object-contain hidden md:block" />
-                        <div className="absolute -right-40 flex-col text-black font-medium text-center -space-y-1 hidden md:flex">
+                        <img src="/textbubble-name.png" alt="name-bubble" className="absolute -top-3 -right-52 w-[465px] object-contain hidden md:block" />
+                        <div className="absolute -right-44 flex-col text-black font-medium text-center -space-y-1 hidden md:flex">
                             <div className='font-outland text-[28px]'>My name is</div>
                             <div className='font-boldoa text-[50px]'>Jibran Wafi Prawiko</div>
                         </div>
                     </div>
-                    <img src="/profile.png" alt="title-image" className="md:w-3/4 w-full object-cover mx-auto md:block hidden" />
-                    <img src="/mobile-profile.png" alt="title-image" className="md:hidden block w-full object-cover mx-auto" />
+                    <img src="/profile3.png" alt="title-image" className="md:w-3/4 w-full object-cover mx-auto md:block hidden" />
+                    <img src="/mobileprofile2.png" alt="title-image" className="md:hidden block w-full object-cover mx-auto" />
                     
                 </motion.div>
             </motion.div>
