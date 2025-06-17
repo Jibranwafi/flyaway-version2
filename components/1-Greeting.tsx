@@ -107,7 +107,12 @@ const Greeting = () => {
                         delay: 1.5
                     }}
                 >
-                    I hope you're having a wonderful {isNight ? 'night' : 'morning'}
+                    I hope you're having a wonderful {
+                        isNight ? 'night' : 
+                        new Date().getHours() >= 17 ? 'evening' :
+                        new Date().getHours() >= 12 ? 'afternoon' :
+                        'morning'
+                    }
                 </motion.p>
             </motion.div>
 

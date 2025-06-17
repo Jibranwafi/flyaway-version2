@@ -817,6 +817,7 @@ export default function Skills() {
                                         { name: 'Figma', years: '3 Years', image: 'skills-icon-figma.png' },
                                         { name: 'Canva Video Editing', years: '1 Year', image: 'skills-icon-videoediting.png' },
                                         { name: 'Graphic Design', years: '2 Years', image: 'skills-icon-graphicdesign.png' },
+                                        { name: 'Public Speaking', years: '4 Years', image: 'skills-icon-publicspeaking.png' }
                                     ].map((skill, index) => (
                                         <React.Fragment key={skill.name}>
                                             <div className="flex gap-4">
@@ -828,7 +829,7 @@ export default function Skills() {
                                                     <div className='font-light'>{skill.years}</div>
                                                 </div>
                                             </div>
-                                            {index < 2 && <div className="border-t border-black"></div>}
+                                            {index < 3 && <div className="border-t border-black"></div>}
                                         </React.Fragment>
                                     ))}
                                 </div>
@@ -909,7 +910,6 @@ export default function Skills() {
                                         { name: 'Script-writing', years: '1 Year', image: 'skills-icon-scriptwriting.png' },
                                         { name: 'Storytelling', years: '7 Years', image: 'skills-icon-storytelling.png' },
                                         { name: 'Novel Writing', years: '3 Years', image: 'skills-icon-novelwriting.png' },
-                                        { name: 'Public Speaking', years: '4 Years', image: 'skills-icon-publicspeaking.png' }
                                     ].map((skill, index) => (
                                         <React.Fragment key={skill.name}>
                                             <div className="flex gap-4">
@@ -921,7 +921,7 @@ export default function Skills() {
                                                     <div className='font-light'>{skill.years}</div>
                                                 </div>
                                             </div>
-                                            {index < 3 && <div className="border-t border-black"></div>}
+                                            {index < 2 && <div className="border-t border-black"></div>}
                                         </React.Fragment>
                                     ))}
                                 </div>
