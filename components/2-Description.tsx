@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Description() {
     const [role, setRole] = useState("Writer");
+    const [isMobile, setIsMobile] = useState(false);
     
     useEffect(() => {
         const roles = ["Creative Writer", "Software Engineer", "Game Developer", "Graphic Designer", "Data Scientist"];
@@ -17,11 +18,22 @@ export default function Description() {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsMobile(window.innerWidth < 768); // 768px is typical md breakpoint
+        };
+        
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+        
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
+
     return (
         <div
-            className="relative flex flex-col items-center justify-center py-20 px-4 -mt-20 -mb-10 xl:min-h-[450px] lg:min-h-[400px] md:min-h-[350px] min-h-[200px]"
+            className="relative flex flex-col items-center justify-center md:py-20 py-10 px-4 -mt-20 -mb-10 xl:min-h-[450px] lg:min-h-[400px] md:min-h-[350px] min-h-[200px]"
             style={{
-                backgroundImage: "url('/description2.png')",
+                backgroundImage: `url('${isMobile ? '/description4.png' : '/description2.png'}')`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',

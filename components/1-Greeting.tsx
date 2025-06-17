@@ -118,7 +118,7 @@ const Greeting = () => {
                 transition={{ duration: 0.6, delay: 1 }}
             >
                 <motion.div 
-                    className="md:px-0 px-10  relative "
+                    className="md:px-0 px-2 relative "
                     transition={{
                         duration: 3,
                         repeat: Infinity,
