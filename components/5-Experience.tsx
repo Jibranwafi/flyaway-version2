@@ -264,7 +264,7 @@ export default function Experience({ onPdfModalChange }: ExperienceProps) {
                     <div className="flex flex-col">
                         <div className="md:mt-4 px-5 pb-8 pt-10 md:p-0 md:mb-6 mb-5 w-full " style={{ backgroundColor: isMobile ? timeBasedBg : 'transparent' }}>
                             <div className="md:text-3xl text-lg font-bold">PT Lumbung Artha Kita</div>
-                            <div className="md:text-xl text-sm">July 2024 – Present</div>
+                            <div className="md:text-xl text-sm">July 2024 – October 2025</div>
                         </div>
                         <div className="flex md:flex-row flex-col md:space-x-3 space-y-4 md:space-y-0 md:p-0 px-5 pb-5">
                             <div className="flex flex-col md:bg-gray-200 md:p-4 md:basis-1/3 space-y-2 md:space-y-4 rounded-t-xl overflow-hidden" style={{
@@ -293,6 +293,93 @@ export default function Experience({ onPdfModalChange }: ExperienceProps) {
                                 <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Lubkita.id Website</div>
                                 <div className="md:text-base text-sm md:basis-full basis-1/2 ">Designed and developed the webpage for lubkita.id, a website showcasing the highlights for the company's main service.</div>
                             </div>                                  
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Card 4 */}
+                <motion.div 
+                    className="rounded-lg shadow-lg md:p-5 relative col-span-1 md:col-span-2"
+                    style={{
+                        backgroundColor: cardBgColor,
+                        border: '10px solid transparent',
+                        background: `linear-gradient(${cardBgColor}, ${cardBgColor}) padding-box, linear-gradient(90deg, ${gradientColors.start} 0%, ${gradientColors.middle} 50%, ${gradientColors.end} 100%) border-box`,
+                    }}
+                    animate={{
+                        background: [
+                            `linear-gradient(${cardBgColor}, ${cardBgColor}) padding-box, linear-gradient(0deg, ${gradientColors.start} 0%, ${gradientColors.middle} 50%, ${gradientColors.end} 100%) border-box`,
+                            `linear-gradient(${cardBgColor}, ${cardBgColor}) padding-box, linear-gradient(360deg, ${gradientColors.start} 0%, ${gradientColors.middle} 50%, ${gradientColors.end} 100%) border-box`,
+                        ]
+                    }}
+                    transition={{
+                        duration: 6,
+                        repeat: Infinity,
+                        ease: "linear"
+                    }}
+                >
+                    <div className={`absolute -top-5 left-4 ${badgeBgColor} ${badgeTextColor} px-4 py-1 rounded-full text-lg italic font-medium shadow`}>
+                        Fullstack Developer
+                    </div>
+                    <div className="flex flex-col">
+                        <div className="md:mt-4 px-5 pb-8 pt-10 md:p-0 md:mb-6 mb-5 w-full " style={{ backgroundColor: isMobile ? timeBasedBg : 'transparent' }}>
+                            <div className="md:text-3xl text-lg font-bold">PT WSGS Global Sentosa</div>
+                            <div className="md:text-xl text-sm">October 2025 – Present</div>
+                        </div>
+                        <div className="flex md:flex-row flex-col md:space-x-3 space-y-4 md:space-y-0 md:p-0 px-5 pb-5">
+                            <div className="flex flex-col md:bg-gray-200 md:p-4 md:basis-1/3 space-y-2 md:space-y-4 rounded-t-xl overflow-hidden" style={{
+                                background: isMobile ? 'none' : sectionGradient,
+                                borderRadius: '0.75rem 0.75rem 0 0'
+                            }}>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">AI Annotation<br></br> Tool &amp; CMS</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">AI Annotation Tool &amp; CMS</div>
+                                <div className="md:text-base text-sm md:basis-full basis-1/2 ">Developed an image annotation tool with CMS to generate a YOLO dataset for an object-detection model targeting car defects.</div>
+                            </div>
+                            <div className={`md:hidden border-y ${borderColor}`}></div>
+                            <div className="flex flex-col md:bg-gray-200 md:p-4 md:basis-1/3 space-y-2 md:space-y-4 rounded-t-xl overflow-hidden" style={{
+                                background: isMobile ? 'none' : sectionGradient,
+                                borderRadius: '0.75rem 0.75rem 0 0'
+                            }}>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Touchscreen<br></br> Web App UI</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Touchscreen Web App UI</div>
+                                <div className="md:text-base text-sm md:basis-full basis-1/2 ">Built a web-based and desktop-based app for a touchscreen display in a PostmarketOS PC, letting customers see the defects across their car captured by the YOLO AI.</div>
+                            </div>
+                            <div className={`md:hidden border-y ${borderColor}`}></div>
+                            <div className="flex flex-col md:bg-gray-200 md:p-4 md:basis-1/3 space-y-2 md:space-y-4 rounded-t-xl overflow-hidden" style={{
+                                background: isMobile ? 'none' : sectionGradient,
+                                borderRadius: '0.75rem 0.75rem 0 0'
+                            }}>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Plotter App<br></br> Modification</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Plotter App Modification</div>
+                                <div className="md:text-base text-sm md:basis-full basis-1/2 ">Customized an open-source SVG plotter application to be integrated upon the company&apos;s own digital infrastructure.</div>
+                            </div>
+                        </div>
+                        <div className="flex md:flex-row flex-col md:space-x-3 space-y-4 md:space-y-0 md:p-0 px-5 pb-5 md:pt-3">
+                            <div className="flex flex-col md:bg-gray-200 md:p-4 md:basis-1/3 space-y-2 md:space-y-4 rounded-t-xl overflow-hidden" style={{
+                                background: isMobile ? 'none' : sectionGradient,
+                                borderRadius: '0.75rem 0.75rem 0 0'
+                            }}>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Custom Admin<br></br> ERP System</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Custom Admin ERP System</div>
+                                <div className="md:text-base text-sm md:basis-full basis-1/2 ">Created a ERP system with RBAC implementation for managing financial and operational reports, including sales, expenses, and profit &amp; loss statement.</div>
+                            </div>
+                            <div className={`md:hidden border-y ${borderColor}`}></div>
+                            <div className="flex flex-col md:bg-gray-200 md:p-4 md:basis-1/3 space-y-2 md:space-y-4 rounded-t-xl overflow-hidden" style={{
+                                background: isMobile ? 'none' : sectionGradient,
+                                borderRadius: '0.75rem 0.75rem 0 0'
+                            }}>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">Synchronized<br></br> Multi-cam System</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">Synchronized Multi-cam System</div>
+                                <div className="md:text-base text-sm md:basis-full basis-1/2 ">Engineered a synchronized, multi-node burst-capture camera system using a network of Raspberry Pis with motion sensors.</div>
+                            </div>
+                            <div className={`md:hidden border-y ${borderColor}`}></div>
+                            <div className="flex flex-col md:bg-gray-200 md:p-4 md:basis-1/3 space-y-2 md:space-y-4 rounded-t-xl overflow-hidden" style={{
+                                background: isMobile ? 'none' : sectionGradient,
+                                borderRadius: '0.75rem 0.75rem 0 0'
+                            }}>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 hidden md:block">LAN Automation<br></br> System</div>
+                                <div className="font-bold md:text-2xl text-base md:basis-full basis-2/5 my-auto text-left md:pr-0 pr-5 md:hidden">LAN Automation System</div>
+                                <div className="md:text-base text-sm md:basis-full basis-1/2 ">Planned and designed an automation system where every computer and IoT devices within the company&apos;s sphere can communicate easily through each other.</div>
+                            </div>
                         </div>
                     </div>
                 </motion.div>
@@ -442,7 +529,7 @@ export default function Experience({ onPdfModalChange }: ExperienceProps) {
                             </svg>
                         </button>
                         <iframe
-                            src="/portofolio-document.pdf"
+                            src="/portfolio-document-2026.pdf"
                             style={{ width: '100%', height: '100%', border: 'none' }}
                             title="Portfolio PDF"
                         />

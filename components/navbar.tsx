@@ -21,23 +21,33 @@ export default function Navbar({ isPdfModalOpen = false }: NavbarProps) {
   const [activeSection, setActiveSection] = useState('greeting');
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+    const updateActiveSection = () => {
+      const isMobile = window.innerWidth < 768;
+      const referencePoint = window.innerHeight * 0.35;
 
-    sections.forEach(({ id }) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
+      let current = sections[0].id;
 
-    return () => observer.disconnect();
+      for (const { id, mobileId } of sections) {
+        const targetId = isMobile && mobileId ? mobileId : id;
+        const element = document.getElementById(targetId) ?? document.getElementById(id);
+        if (!element) continue;
+
+        if (element.getBoundingClientRect().top <= referencePoint) {
+          current = id;
+        }
+      }
+
+      setActiveSection(current);
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('resize', updateActiveSection);
+
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('resize', updateActiveSection);
+    };
   }, []);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string, mobileId?: string) => {

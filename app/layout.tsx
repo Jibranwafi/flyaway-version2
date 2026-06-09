@@ -1,5 +1,19 @@
 import './globals.css';
 import type { Metadata } from 'next';
+
+// Polyfill localStorage on server so libraries (e.g. framer-motion) that touch it during SSR don't throw
+if (typeof window === 'undefined') {
+  (globalThis as typeof globalThis & { localStorage: Storage }).localStorage = {
+    getItem: () => null,
+    setItem: () => {},
+    removeItem: () => {},
+    clear: () => {},
+    get length() {
+      return 0;
+    },
+    key: () => null,
+  };
+}
 import { DM_Sans, DM_Serif_Display, Leckerli_One, Press_Start_2P, Handjet } from 'next/font/google';
 import localFont from 'next/font/local';
 

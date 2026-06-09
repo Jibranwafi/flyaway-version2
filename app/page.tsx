@@ -10,6 +10,7 @@ import Contect from '@/components/6-Contact';
 import Novel from '@/components/7-Novel';
 import Dream from '@/components/8-Dream';
 import Navbar from '@/components/navbar';
+import ClientOnly from '@/components/ClientOnly';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -55,9 +56,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar isPdfModalOpen={isPdfModalOpen} />
-      <main className="flex-grow">
+    <ClientOnly
+      fallback={
+        <div className="min-h-screen flex flex-col bg-[#fdebbc]" aria-hidden />
+      }
+    >
+      <div className="min-h-screen flex flex-col">
+        <Navbar isPdfModalOpen={isPdfModalOpen} />
+        <main className="flex-grow">
         <div id="greeting">
           <Greeting />
         </div>
@@ -158,5 +164,6 @@ export default function Home() {
         </motion.div>
       </main>
     </div>
+    </ClientOnly>
   );
 }

@@ -397,7 +397,7 @@ export default function Skills() {
 
                         {/* Skills tags */}
                         <div className="flex flex-wrap p-4 gap-3">
-                            {['Raspberry Pi', 'ESP', 'Arduino', 'Virtual Prototyping'].map((skill) => (
+                            {['Raspberry Pi', 'ESP', 'Arduino', 'Virtual Prototyping', 'OpenCV'].map((skill) => (
                                 <div key={skill} className="rounded-full bg-purple-300 px-3 py-1">
                                     {skill}
                                 </div>
@@ -436,10 +436,11 @@ export default function Skills() {
 
                                 <div className='flex flex-col gap-4 p-10 pt-24'>
                                     {[
-                                        { name: 'Raspberry Pi', years: '2 Years & 6 Months', image: 'skills-icon-raspberrypi.png' },
+                                        { name: 'Raspberry Pi', years: '4 Years', image: 'skills-icon-raspberrypi.png' },
                                         { name: 'ESP', years: '3 Years', image: 'skills-icon-esp.png' },
                                         { name: 'Arduino', years: '3 Years', image: 'skills-icon-arduino.png' },
-                                        { name: 'Virtual Prototyping', years: '1 Year', image: 'skills-icon-virtualprototyping.png' }
+                                        { name: 'Virtual Prototyping', years: '1 Year', image: 'skills-icon-virtualprototyping.png' },
+                                        { name: 'OpenCV', years: '1 Year', image: 'skills-icon-opencv.png' }
                                     ].map((skill, index) => (
                                         <React.Fragment key={skill.name}>
                                             <div className="flex gap-4">
@@ -451,7 +452,7 @@ export default function Skills() {
                                                     <div className='font-light'>{skill.years}</div>
                                                 </div>
                                             </div>
-                                            {index < 3 && <div className="border-t border-black"></div>}
+                                            {index < 4 && <div className="border-t border-black"></div>}
                                         </React.Fragment>
                                     ))}
                                 </div>
@@ -488,13 +489,13 @@ export default function Skills() {
                                 <img src="skils-symbol-datascience.png" alt="Data Science"/>
                             </div>
                             <div className="my-auto text-2xl text-green-500 font-bold ml-4">
-                                Data Science
+                                AI & Data<br/> Science
                             </div>
                         </div>
 
                         {/* Skills tags */}
                         <div className="flex flex-wrap p-4 gap-3">
-                            {['Genetic Algorithms', 'Fuzzy Logic', 'Linear Regression',].map((skill) => (
+                            {['Genetic Algorithms', 'Fuzzy Logic', 'Linear Regression', 'YOLO', 'PaddleOCR'].map((skill) => (
                                 <div key={skill} className="rounded-full bg-green-300 px-3 py-1">
                                     {skill}
                                 </div>
@@ -525,7 +526,7 @@ export default function Skills() {
                                 style={{ height: `var(--card-height-3)` }}
                             >
                                 <div className='relative'>
-                                    <div className='font-bold text-xl text-white bg-green-500 rounded-br-2xl rounded-tl-2xl w-fit px-4 py-5'>Data Science</div>
+                                    <div className='font-bold text-xl text-white bg-green-500 rounded-br-2xl rounded-tl-2xl w-fit px-4 py-5'>AI & Data Science</div>
                                     <div className="absolute top-2 right-2 flex justify-between items-center">
                                         <img src="skills-learnmore-back2.png" alt="Arrow" className="w-10 h-10 hover:scale-110 transition-all duration-300 ease-in-out" onClick={() => toggleContent('data-science')}/>
                                     </div>
@@ -535,6 +536,8 @@ export default function Skills() {
                                         { name: 'Genetic Algorithms', years: '1 Year', image: 'skills-icon-geneticalgorithm.png' },
                                         { name: 'Fuzzy Logic', years: '1 Year & 6 Months', image: 'skills-icon-fuzzylogic.png' },
                                         { name: 'Linear Regression', years: '2 Years', image: 'skills-icon-linearregression.png' },
+                                        { name: 'YOLO', years: '1 Year', image: 'skills-icon-yolo.png' },
+                                        { name: 'PaddleOCR', years: '1 Year', image: 'skills-icon-paddleocr.png' },
                                     ].map((skill, index) => (
                                         <React.Fragment key={skill.name}>
                                             <div className="flex gap-4">
@@ -546,7 +549,7 @@ export default function Skills() {
                                                     <div className='font-light'>{skill.years}</div>
                                                 </div>
                                             </div>
-                                            {index < 2 && <div className="border-t border-black"></div>}
+                                            {index < 4 && <div className="border-t border-black"></div>}
                                         </React.Fragment>
                                     ))}
                                 </div>
@@ -681,7 +684,7 @@ export default function Skills() {
 
                         {/* Skills tags */}
                         <div className="flex flex-wrap p-4 gap-3">
-                            {['ASP.NET Core', 'Blazor Server', 'Laravel', 'Native PHP'].map((skill) => (
+                            {['ASP.NET Core', 'Blazor Server', 'Laravel', 'Native PHP', 'CodeIgniter'].map((skill) => (
                                 <div key={skill} className="rounded-full bg-orange-300 px-3 py-1">
                                     {skill}
                                 </div>
@@ -722,7 +725,8 @@ export default function Skills() {
                                         { name: 'ASP.NET Core', years: '1 Year', image: 'skills-icon-aspnet.png' },
                                         { name: 'Blazor Server', years: '1 Year', image: 'skills-icon-blazorserver.png' },
                                         { name: 'Laravel', years: '1 Year', image: 'skills-icon-laravel.png' },
-                                        { name: 'Native PHP', years: '1 Year', image: 'skills-icon-php.png' }
+                                        { name: 'Native PHP', years: '3 Years', image: 'skills-icon-php.png' },
+                                        { name: 'CodeIgniter', years: '2 Years', image: 'skills-icon-codeigniter.png' }
                                     ].map((skill, index) => (
                                         <React.Fragment key={skill.name}>
                                             <div className="flex gap-4">
@@ -734,7 +738,7 @@ export default function Skills() {
                                                     <div className='font-light'>{skill.years}</div>
                                                 </div>
                                             </div>
-                                            {index < 3 && <div className="border-t border-black"></div>}
+                                            {index < 4 && <div className="border-t border-black"></div>}
                                         </React.Fragment>
                                     ))}
                                 </div>
@@ -863,7 +867,7 @@ export default function Skills() {
                                 <img src="skils-symbol-literature.png" alt="English Literacy"/>
                             </div>
                             <div className="my-auto text-2xl text-gray-500 font-bold ml-4">
-                                English Literacy
+                                English<br/>Literacy
                             </div>
                         </div>
 
@@ -900,7 +904,7 @@ export default function Skills() {
                                 style={{ height: `var(--card-height-7)` }}
                             >
                                 <div className='relative'>
-                                    <div className='font-bold text-xl text-white bg-gray-500 rounded-br-2xl rounded-tl-2xl w-fit px-4 py-5'>English Literacy</div>
+                                    <div className='font-bold text-xl text-white bg-gray-500 rounded-br-2xl rounded-tl-2xl w-fit px-4 py-5'>English<br/>Literacy</div>
                                     <div className="absolute top-2 right-2 flex justify-between items-center">
                                         <img src="skills-learnmore-back2.png" alt="Arrow" className="w-10 h-10 hover:scale-110 transition-all duration-300 ease-in-out" onClick={() => toggleContent('english-literacy')}/>
                                     </div>
